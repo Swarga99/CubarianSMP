@@ -13,8 +13,8 @@ Welcome to **Cubarian SMP**, a premium **paid Minecraft Survival Multiplayer ser
 ---
 
 ## 📅 Important Dates
-- 🔥 **Server Launch:** 17th September  
-- ⏳ **Last Date of Payment:** 12th September  
+- 🔥 **Server Launch:** 21th September  
+- ⏳ **Last Date of Payment:** 19th September  
 
 ---
 
