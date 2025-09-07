@@ -513,20 +513,38 @@
             border-top: 2px solid #ff69b4; /* Pink border */
         }
         
-        .whatsapp-link {
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .whatsapp-link, .discord-link {
             display: inline-block;
-            background: #25D366;
-            color: white;
             padding: 15px 30px;
+            color: white;
             text-decoration: none;
             border-radius: 10px;
             font-weight: bold;
-            margin-bottom: 2rem;
             transition: all 0.3s ease;
+        }
+        
+        .whatsapp-link {
+            background: #25D366;
         }
         
         .whatsapp-link:hover {
             background: #128C7E;
+            transform: translateY(-3px);
+        }
+        
+        .discord-link {
+            background: #7289DA;
+        }
+        
+        .discord-link:hover {
+            background: #5B6EAE;
             transform: translateY(-3px);
         }
         
@@ -551,6 +569,11 @@
             
             .features-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
             }
         }
         
@@ -595,7 +618,6 @@
             <p>Experience Minecraft like never before with limitless customizations, real-life mechanics, and an immersive survival world that challenges every aspect of gameplay. Everyone needs to download Discord to join our community.</p>
             <div class="cta-buttons">
                 <a href="#pricing" class="cta-button">Become a member with just ₹100</a>
-                <!-- Removed Join Discord button as it's locked for paid members only -->
             </div>
         </div>
     </section>
@@ -754,13 +776,13 @@
                     <li>Custom events participation</li>
                     <li>24/7 admin support</li>
                     <li>High-performance gameplay</li>
-                    <li>Discord community access (link provided after payment) - Get the full modpack with teasers including custom combat systems for intense PvP/PvE, professions and player-driven economy, real-life mechanics like temperature and thirst, advanced backpack inventory, enhanced dimensions with unique biomes, and government system for community governance.</li>
+                    <li>Discord community access (link provided below) - Get the full modpack with teasers including custom combat systems for intense PvP/PvE, professions and player-driven economy, real-life mechanics like temperature and thirst, advanced backpack inventory, enhanced dimensions with unique biomes, and government system for community governance.</li>
                     <li>Server IP provided after payment</li>
                 </ul>
                 <a href="#" class="cta-button">Get Access Now</a>
                 <p><img src="qr_code.jpg" alt="Scan to pay with UPI" style="max-width: 200px; margin-top: 1rem;"></p>
                 <p style="margin-top: 1rem; color: #ccc; font-size: 0.9rem;">
-                    Scan the QR code above to pay ₹100 and become a member. After payment, you will receive the server IP, Discord, and WhatsApp group links for the respective server and group. Note: Only subscribers (paid members) can join the Discord server.
+                    Scan the QR code above to pay ₹100 and become a member. After payment, you will receive the server IP and WhatsApp group link for the respective server and group.
                 </p>
             </div>
         </div>
@@ -827,11 +849,15 @@
 
     <footer id="discord">
         <div class="container">
-            <h3 style="color: #ff69b4; margin-bottom: 1rem;">Join Our Community</h3> <!-- Pink heading -->
-            <p style="margin-bottom: 1rem;">Discord is for paid members only (link provided after payment).</p>
-            <a href="https://chat.whatsapp.com/EmAUsxeVtGCBtfJlbUt7Xz" class="whatsapp-link" target="_blank">
-                📱 Join WhatsApp Group (Open to Everyone)
-            </a>
+            <h3 style="color: #ff69b4; margin-bottom: 1rem;">Join Our Community</h3>
+            <div class="social-links">
+                <a href="https://chat.whatsapp.com/EmAUsxeVtGCBtfJlbUt7Xz" class="whatsapp-link" target="_blank">
+                    📱 Join WhatsApp Group
+                </a>
+                <a href="https://discord.gg/kHrjTbAhk2" class="discord-link" target="_blank">
+                    🎮 Join Discord Server
+                </a>
+            </div>
             <p>&copy; 2025 CUBARIANS. All rights reserved.</p>
             <p style="margin-top: 1rem; color: #666;">
                 Experience Minecraft survival like never before - where every decision matters and every adventure is unique.
@@ -897,7 +923,7 @@
 
         document.getElementById('submit-reg').addEventListener('click', () => {
             // Here you could add form validation if needed
-            window.location.href = '#pricing'; // Redirect to pricing section instead of opening Discord
+            window.location.href = '#pricing';
         });
 
         // Add falling petals animation to fit the cherry blossom theme
